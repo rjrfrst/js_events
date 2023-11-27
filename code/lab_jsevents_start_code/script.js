@@ -1,7 +1,5 @@
 const enterButton = document.querySelector("#enter");
 const toDoList = document.querySelector("#list");
-const newToDo = document.querySelector("#new-todo");
-const textOutput = document.querySelector("#text-output");
 const form = document.querySelector("#todo-form");
 
 form.addEventListener("submit", (event) => {
@@ -24,4 +22,12 @@ form.addEventListener("submit", (event) => {
     toDoList.appendChild(newItem); //Add a new item in the empty list 
 
 });
+
+// get the date 
+
+const date = document.querySelector("#date-button");
+
+date.addEventListener("click", () => {
+    console.log(Date());
+})
 
