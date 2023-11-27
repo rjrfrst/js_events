@@ -2,18 +2,14 @@ const enterButton = document.querySelector("#enter");
 const toDoList = document.querySelector("#list");
 const newToDo = document.querySelector("#new-todo");
 const textOutput = document.querySelector("#text-output");
+const form = document.querySelector("#todo-form");
 
-
-enterButton.addEventListener("click", () =>{
-    console.log("button clicked");
-});
-
-toDoList.addEventListener("input", (event) => {
-    textOutput.innerText = event.target.value;
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log(event);
 
     const newItem = document.createElement('li'); //Empty 
-    newItem.innerText = event.target.value;
+    newItem.innerText = event.target[0].value;
 
-    list.appendChild(newItem); //Add empty 
-
+    toDoList.appendChild(newItem); //Add empty 
 });
